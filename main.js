@@ -23,6 +23,12 @@ const altTexts = {
 };
 
 /* Looping through images */
+for (const filename of imageFilenames) {
+  const newImage = document.createElement('img');
+  newImage.setAttribute('src', `images/${filename}`);
+  newImage.setAttribute('alt', altTexts[filename]);
+  thumbBar.appendChild(newImage);
+}
 
 const newImage = document.createElement('img');
 newImage.setAttribute('src', xxx);
