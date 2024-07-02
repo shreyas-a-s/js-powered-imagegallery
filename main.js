@@ -28,6 +28,11 @@ for (const filename of imageFilenames) {
   newImage.setAttribute('src', `images/${filename}`);
   newImage.setAttribute('alt', altTexts[filename]);
   thumbBar.appendChild(newImage);
+
+  newImage.addEventListener('click', function() {
+    displayedImage.setAttribute('src', newImage.getAttribute('src'));
+    displayedImage.setAttribute('alt', newImage.getAttribute('alt'));
+  });
 }
 
 const newImage = document.createElement('img');
